@@ -1,0 +1,75 @@
+-- The C compiler identification is GNU 7.5.0
+-- The CXX compiler identification is GNU 7.5.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Looking for pthread_create
+-- Looking for pthread_create - not found
+-- Check if compiler accepts -pthread
+-- Check if compiler accepts -pthread - yes
+-- Found Threads: TRUE  
+-- Configuring done
+CMake Warning (dev) in CMakeLists.txt:
+  No cmake_minimum_required command is present.  A line of code such as
+
+    cmake_minimum_required(VERSION 3.10)
+
+  should be added at the top of the file.  The version specified may be lower
+  if you wish to support older CMake versions for this project.  For more
+  information run "cmake --help-policy CMP0000".
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Generating done
+-- Build files have been written to: /mnt/src/build
+Scanning dependencies of target client
+[  8%] Building C object CMakeFiles/client.dir/src/client.o
+[ 16%] Building C object CMakeFiles/client.dir/src/packet.o
+[ 25%] Building C object CMakeFiles/client.dir/src/util.o
+[ 33%] Linking C executable client
+[ 33%] Built target client
+Scanning dependencies of target peer
+[ 41%] Building C object CMakeFiles/peer.dir/src/peer.o
+/mnt/src/src/peer.c: In function 'proxy_request':
+/mnt/src/src/peer.c:55:27: warning: unused parameter 'srv' [-Wunused-parameter]
+ int proxy_request(server *srv, int csocket, packet *p, peer *n) {
+                           ^~~
+/mnt/src/src/peer.c: In function 'handle_own_request':
+/mnt/src/src/peer.c:108:32: warning: unused parameter 'srv' [-Wunused-parameter]
+ int handle_own_request(server* srv, client *c, packet *p) {
+                                ^~~
+/mnt/src/src/peer.c: In function 'handle_packet_ctrl':
+/mnt/src/src/peer.c:360:27: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+                 successor = lookup_peer(start);
+                           ^
+/mnt/src/src/peer.c: In function 'main':
+/mnt/src/src/peer.c:560:15: warning: unused variable 'portPeer' [-Wunused-variable]
+         char *portPeer = argv[4];
+               ^~~~~~~~
+/mnt/src/src/peer.c:559:15: warning: unused variable 'hostPeer' [-Wunused-variable]
+         char *hostPeer = argv[3];
+               ^~~~~~~~
+/mnt/src/src/peer.c:588:15: warning: unused variable 'portPeer' [-Wunused-variable]
+         char *portPeer = argv[5];
+               ^~~~~~~~
+/mnt/src/src/peer.c:587:15: warning: unused variable 'hostPeer' [-Wunused-variable]
+         char *hostPeer = argv[4];
+               ^~~~~~~~
+[ 50%] Building C object CMakeFiles/peer.dir/src/server.o
+[ 58%] Building C object CMakeFiles/peer.dir/src/packet.o
+[ 66%] Building C object CMakeFiles/peer.dir/src/util.o
+[ 75%] Building C object CMakeFiles/peer.dir/src/hash_table.o
+[ 83%] Building C object CMakeFiles/peer.dir/src/neighbour.o
+[ 91%] Building C object CMakeFiles/peer.dir/src/requests.o
+[100%] Linking C executable peer
+[100%] Built target peer

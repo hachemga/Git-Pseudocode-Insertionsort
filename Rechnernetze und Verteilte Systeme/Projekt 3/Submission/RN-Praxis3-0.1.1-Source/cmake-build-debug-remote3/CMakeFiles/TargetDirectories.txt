@@ -1,0 +1,6 @@
+/home/hachem/praxis3/cmake-build-debug-remote3/CMakeFiles/client.dir
+/home/hachem/praxis3/cmake-build-debug-remote3/CMakeFiles/peer.dir
+/home/hachem/praxis3/cmake-build-debug-remote3/CMakeFiles/package.dir
+/home/hachem/praxis3/cmake-build-debug-remote3/CMakeFiles/package_source.dir
+/home/hachem/praxis3/cmake-build-debug-remote3/CMakeFiles/edit_cache.dir
+/home/hachem/praxis3/cmake-build-debug-remote3/CMakeFiles/rebuild_cache.dir

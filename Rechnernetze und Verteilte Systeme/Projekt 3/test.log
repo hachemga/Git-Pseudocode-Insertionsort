@@ -1,0 +1,120 @@
+.
+----------------------------------------------------------------------
+Ran 1 test in 2.938s
+
+OK
+F.F..FFF.
+======================================================================
+FAIL: test_FT_minimal (rnvs_tb.blocks.block6.JoinAndFTTestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/rnvs_tb/mock.py", line 153, in run
+    response = self.packet.__class__.parse(reply)
+  File "/usr/local/lib/python3.10/dist-packages/rnvs_tb/packet.py", line 175, in parse
+    raise ValueError('Not enough data to parse Control packet!')
+ValueError: Not enough data to parse Control packet!
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/rnvs_tb/blocks/block6.py", line 368, in test_FT_minimal
+    c2.await_packet(2.0)
+  File "/usr/local/lib/python3.10/dist-packages/rnvs_tb/mock.py", line 105, in await_packet
+    raise AssertionError('Did not receive expected packet due to previous errors!') from value
+AssertionError: Did not receive expected packet due to previous errors!
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/rnvs_tb/blocks/block6.py", line 371, in test_FT_minimal
+    self.fail(f'Did not receive ACK packet. Trace: {trace}')
+AssertionError: Did not receive ACK packet. Trace: Stdout0: bytearray(b'') // Stderr0: bytearray(b'Starting server. Press any key to exit.\nDecoded control packet header: \n\tJOIN: 1\n\tNOTIFY: 0\n\tSTABILIZE: 0\n\tLOOKUP: 0\n\tREPLY: 0\nHandling control packet...\nconnect: Connection refused\nFailed to connect to peer 172.20.0.2:4001\nDecoded control packet header: \n\tJOIN: 1\n\tNOTIFY: 0\n\tSTABILIZE: 0\n\tLOOKUP: 0\n\tREPLY: 0\nHandling control packet...\nconnect: Connection refused\nFailed to connect to peer 172.20.0.2:4002\nDecoded control packet header: \n\tJOIN: 1\n\tNOTIFY: 0\n\tSTABILIZE: 0\n\tLOOKUP: 0\n\tREPLY: 0\nHandling control packet...\nconnect: Connection refused\nFailed to connect to peer 172.20.0.2:4003\nNothing is happening...\nDecoded control packet header: \n\tJOIN: 0\n\tNOTIFY: 1\n\tSTABILIZE: 0\n\tLOOKUP: 0\n\tREPLY: 0\nDecoded control packet header: \n\tJOIN: 0\n\tNOTIFY: 1\n\tSTABILIZE: 0\n\tLOOKUP: 0\n\tREPLY: 0\nHandling control packet...\nHandling control packet...\nDecoded control packet header: \n\tJOIN: 0\n\tNOTIFY: 1\n\tSTABILIZE: 0\n\tLOOKUP: 0\n\tREPLY: 0\nHandling control packet...\nDecoded packet header: \n\tACK: 0\n\tGET: 0\n\tSET: 1\n\tDEL: 0\n\tKey Length: 26 Bytes\n\tValue Length: 13 Bytes\nUnknown AF: Connection closed.\nHash id: 22376\nWe are responsible.\nDecoded control packet header: \n\tJOIN: 0\n\tNOTIFY: 0\n\tSTABILIZE: 0\n\tLOOKUP: 0\n\tREPLY: 0\nHandling control packet...\nconnect: Connection refused\nFailed to connect to peer 172.20.0.2:4001\nconnect: Connection refused\nFailed to connect to peer 172.20.0.2:4001\nconnect: Connection refused\nFailed to connect to peer 172.20.0.2:4001\nconnect: Connection refused\nFailed to connect to peer 172.20.0.2:4001\nconnect: Connection refused\nFailed to connect to peer 172.20.0.2:4001\nconnect: Connection refused\n') Stdout1: bytearray(b'') // Stderr1: bytearray(b'Attempting connection to 172.20.0.2\nConnected to 172.20.0.2.\nStarting server. Press any key to exit.\nDecoded control packet header: \n\tJOIN: 0\n\tNOTIFY: 0\n\tSTABILIZE: 1\n\tLOOKUP: 0\n\tREPLY: 0\nHandling control packet...\nDecoded control packet header: \n\tJOIN: 0\n\tNOTIFY: 0\n\tSTABILIZE: 1\n\tLOOKUP: 0\n\tREPLY: 0\nHandling control packet...\nDecoded control packet header: \n\tJOIN: 0\n\tNOTIFY: 0\n\tSTABILIZE: 1\n\tLOOKUP: 0\n\tREPLY: 0\nHandling control packet...\nDecoded control packet header: \n\tJOIN: 0\n\tNOTIFY: 0\n\tSTABILIZE: 1\n\tLOOKUP: 0\n\tREPLY: 0\nHandling control packet...\nDecoded control packet header: \n\tJOIN: 0\n\tNOTIFY: 0\n\tSTABILIZE: 0\n\tLOOKUP: 1\n\tREPLY: 0\nDecoded control packet header: \n\tJOIN: 0\n\tNOTIFY: 0\n\tSTABILIZE: 0\n\tLOOKUP: 1\n\tREPLY: 0\nHandling control packet...\n') Stdout2: bytearray(b'') // Stderr2: bytearray(b'Attempting connection to 172.20.0.2\nConnected to 172.20.0.2.\nStarting server. Press any key to exit.\nNothing is happening...\nNothing is happening...\n') Stdout3: bytearray(b'') // Stderr3: bytearray(b'Attempting connection to 172.20.0.2\nConnected to 172.20.0.2.\nStarting server. Press any key to exit.\nNothing is happening...\nNothing is happening...\n')
+
+======================================================================
+FAIL: test_full_join_student (rnvs_tb.blocks.block6.JoinAndFTTestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/rnvs_tb/mock.py", line 167, in send_response
+    packet = self.server.resp_q.get(timeout=2.0)
+  File "/usr/lib/python3.10/queue.py", line 179, in get
+    raise Empty
+_queue.Empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/socketserver.py", line 683, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.10/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.10/socketserver.py", line 747, in __init__
+    self.handle()
+  File "/usr/local/lib/python3.10/dist-packages/rnvs_tb/mock.py", line 257, in handle
+    self.send_response()
+  File "/usr/local/lib/python3.10/dist-packages/rnvs_tb/mock.py", line 176, in send_response
+    raise RuntimeError('Expected response packet in queue! This should not happen!')
+RuntimeError: Expected response packet in queue! This should not happen!
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/rnvs_tb/blocks/block6.py", line 212, in test_full_join_student
+    forwarded_l: ControlPacket = anchor.await_packet(ControlPacket, 2.0)
+  File "/usr/local/lib/python3.10/dist-packages/rnvs_tb/mock.py", line 38, in await_packet
+    raise AssertionError('Did not receive expected packet due to previous errors!') from value
+AssertionError: Did not receive expected packet due to previous errors!
+
+======================================================================
+FAIL: test_join_mock_peer (rnvs_tb.blocks.block6.JoinAndFTTestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/rnvs_tb/blocks/block6.py", line 294, in test_join_mock_peer
+    self.fail(
+AssertionError: Peer did not reply to JOIN within timeout! Expected NOTIFY. Stdout1: bytearray(b''), Stderr1:bytearray(b'Starting server. Press any key to exit.\nDecoded control packet header: \n\tJOIN: 1\n\tNOTIFY: 0\n\tSTABILIZE: 0\n\tLOOKUP: 0\n\tREPLY: 0\nHandling control packet...\nDecoded control packet header: \n\tJOIN: 1\n\tNOTIFY: 0\n\tSTABILIZE: 0\n\tLOOKUP: 0\n\tREPLY: 0\nHandling control packet...\nconnect: Connection refused\n'), Stdout2: bytearray(b''), Stderr2:bytearray(b'Attempting connection to 172.20.0.2\nConnected to 172.20.0.2.\nStarting server. Press any key to exit.\nDecoded control packet header: \n\tJOIN: 0\n\tNOTIFY: 1\n\tSTABILIZE: 0\n\tLOOKUP: 0\n\tREPLY: 0\nHandling control packet...\nDecoded control packet header: \n\tJOIN: 1\n\tNOTIFY: 0\n\tSTABILIZE: 0\n\tLOOKUP: 0\n\tREPLY: 0\nHandling control packet...\n')
+
+======================================================================
+FAIL: test_student_code_only_set_get (rnvs_tb.blocks.block6.JoinAndFTTestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/rnvs_tb/mock.py", line 153, in run
+    response = self.packet.__class__.parse(reply)
+  File "/usr/local/lib/python3.10/dist-packages/rnvs_tb/packet.py", line 56, in parse
+    key_len, value_len = cls.len_from_header(buffer)
+  File "/usr/local/lib/python3.10/dist-packages/rnvs_tb/packet.py", line 40, in len_from_header
+    raise ValueError(f'Header too short! Expected 7 bytes but got only {len(buffer)}!')
+ValueError: Header too short! Expected 7 bytes but got only 0!
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/rnvs_tb/blocks/block6.py", line 343, in test_student_code_only_set_get
+    get = c2.await_packet(2.0)
+  File "/usr/local/lib/python3.10/dist-packages/rnvs_tb/mock.py", line 105, in await_packet
+    raise AssertionError('Did not receive expected packet due to previous errors!') from value
+AssertionError: Did not receive expected packet due to previous errors!
+
+======================================================================
+FAIL: test_student_code_only_sg_no_id (rnvs_tb.blocks.block6.JoinAndFTTestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/rnvs_tb/mock.py", line 153, in run
+    response = self.packet.__class__.parse(reply)
+  File "/usr/local/lib/python3.10/dist-packages/rnvs_tb/packet.py", line 56, in parse
+    key_len, value_len = cls.len_from_header(buffer)
+  File "/usr/local/lib/python3.10/dist-packages/rnvs_tb/packet.py", line 40, in len_from_header
+    raise ValueError(f'Header too short! Expected 7 bytes but got only {len(buffer)}!')
+ValueError: Header too short! Expected 7 bytes but got only 0!
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/rnvs_tb/blocks/block6.py", line 424, in test_student_code_only_sg_no_id
+    get = c2.await_packet(2.0)
+  File "/usr/local/lib/python3.10/dist-packages/rnvs_tb/mock.py", line 105, in await_packet
+    raise AssertionError('Did not receive expected packet due to previous errors!') from value
+AssertionError: Did not receive expected packet due to previous errors!
+
+----------------------------------------------------------------------
+Ran 9 tests in 69.352s
+
+FAILED (failures=5)

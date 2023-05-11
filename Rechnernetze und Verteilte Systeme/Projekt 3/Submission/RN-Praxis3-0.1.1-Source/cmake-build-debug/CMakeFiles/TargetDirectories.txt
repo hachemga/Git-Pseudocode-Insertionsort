@@ -1,0 +1,6 @@
+/home/hachem/praxis3/cmake-build-debug/CMakeFiles/client.dir
+/home/hachem/praxis3/cmake-build-debug/CMakeFiles/peer.dir
+/home/hachem/praxis3/cmake-build-debug/CMakeFiles/package.dir
+/home/hachem/praxis3/cmake-build-debug/CMakeFiles/package_source.dir
+/home/hachem/praxis3/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/hachem/praxis3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
